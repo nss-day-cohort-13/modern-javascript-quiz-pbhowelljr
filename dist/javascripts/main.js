@@ -4,64 +4,64 @@ alert('main');
 
 var battledome = (function(battledome){
 
-    //COMBATANT CONSTRUCTOR FUNCTION
+    //ROBOT
     battledome.Robot = function(){
       this.health = 100;
       this.damage = 10;
     };
 
-    // FEDERATION (RACE 1) CONSTRUCTOR FUNCTION
+    //DRONE
     battledome.Drone = function(){
       this.type = 'Drone';
 
     };
 
-    // KLINGON (RACE 2) CONSTRUCTOR FUNCTION
+    //BIPEDAL
     battledome.Bipedal = function(){
       this.type = 'Bipedal';
     };
 
-    // VULCAN (RACE 3) CONSTRUCTOR FUNCTION
+    //ATV
     battledome.Atv = function(){
       this.type = 'Atv';
     };
 
-    // ROMULAN (RACE 4) CONSTRUCTOR FUNCTION
+    //QUADCOPTER
     battledome.Quadcopter = function(){
       this.model = 'Quadcopter';
       this.modelHealthModifier = 1;
       this.modelDamageModifier = 1;
     };
 
-    // CRUISER (model 1) CONSTRUCTOR FUNCTION
+    //HOVERSHIP
     battledome.Hovership = function(){
       this.model = 'Hovership';
       this.modelHealthModifier = 1;
       this.modelDamageModifier = 1;
     };
 
-    // DESTROYER (model 2) CONSTRUCTOR FUNCTION
+    //LASER MECH
     battledome.LaserMech = function(){
       this.model = 'LaserMech';
       this.modelHealthModifier = 1;
       this.modelDamageModifier = 1;
     };
 
-    //LASER (model 1) CONSTRUCTOR FUNCTION
+    //GUN MECH
     battledome.GunMech = function(){
     	this.model = 'GunMech';
       this.modelHealthModifier = 1;
       this.modelDamageModifier = 1;
     };
 
-    //PHOTON TORPEDO (model 2) CONSTRUCTOR FUNCTION
+    //ARMOR BUGGY
     battledome.ArmorBuggy = function(){
     	this.model = 'ArmorBuggy';
       this.modelHealthModifier = 1;
       this.modelDamageModifier = 1;
     };
 
-    //PULSE CANNON (model 3) CONSTRUCTOR FUNCTION
+    //FLAME TANK
     battledome.FlameTank = function(){
     	this.model = 'FlameTank';
       this.modelHealthModifier = 1;
