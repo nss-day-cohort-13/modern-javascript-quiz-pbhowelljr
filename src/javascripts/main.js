@@ -1,6 +1,5 @@
 //*****MAIN*****//
 'use strict';
-alert('main');
 
 var battledome = (function(battledome){
 
