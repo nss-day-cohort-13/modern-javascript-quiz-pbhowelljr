@@ -11,9 +11,9 @@ var battledome = (function(battledome){
 				return Math.random() * (max-min) + min;
 			};
 
-			// // APPLIES MODIFIERS TO PLAYER AND PLAYER A OBJECTS//
-			// playerA.applyModifiers();
-			// playerB.applyModifiers();
+			// APPLIES MODIFIERS TO PLAYER AND PLAYER A OBJECTS//
+			playerA.applyModifiers();
+			playerB.applyModifiers();
 
 			//CALLBACK FOR ATTACK BUTTON EVENT LISTENER//
 			//MAIN ATTACK/DAMAGE SEQUENCE//

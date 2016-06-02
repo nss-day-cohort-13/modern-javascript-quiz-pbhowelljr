@@ -7,6 +7,10 @@ var battledome = (function(battledome){
     battledome.Robot = function(){
       this.health = 100;
       this.damage = 10;
+      this.applyModifiers = function() {
+        this.health *= this.modelHealthModifier;
+        this.damage *= this.modelDamageModifier;
+      };
     };
 
     //DRONE
