@@ -1,4 +1,4 @@
-//*****MAIN*****//
+//*****CONSTRUCTORS*****//
 'use strict';
 
 var battledome = (function(battledome){
@@ -67,6 +67,10 @@ var battledome = (function(battledome){
       this.modelDamageModifier = 1;
     };
 
+    //PLAYER
+    battledome.Player = function(name) {
+      this.name = name;
+    };
+
   return battledome;
 })(battledome || {});
-
