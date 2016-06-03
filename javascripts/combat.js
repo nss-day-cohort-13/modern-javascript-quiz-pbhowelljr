@@ -5,38 +5,41 @@
 var battledome = (function(battledome){
 
 	//MAIN COMBAT FUNCTION//
-	battledome.combat = function(playerA, playerB){
+	battledome.combat = (playerA, playerB) => {
 
 		//GENERATES RANDOM NUMBER FOR DAMAGE MULTIPLIER//
-		var randomDamageMultiplier = function (min,max){
+		var randomDamageMultiplier = (min,max) => {
 			return Math.random() * (max-min) + min;
 		};
 
 		//FLOW CONTROL//
-		battledome.flowControl = function(){
+		battledome.flowControl = () => {
 			if(playerA.health <= 0 || playerB.health <= 0) {
 				$('#attackButton').prop('disabled', true);
 				if(playerA.health > playerB.health){
-					console.log("player A wins!");
+					$('.stats').append("player A wins!");
 				} else {
-					console.log("player B wins!");
+					$('.stats').append("player B wins!");
 				}
 			}
 		};
 
 		//CALLBACK FOR ATTACK BUTTON EVENT LISTENER//
 		//MAIN ATTACK/DAMAGE SEQUENCE//
-		battledome.attackSequence = function(){
-			playerA.health -= randomDamageMultiplier(0.75,1.1)*playerB.damage;
-			playerB.health -= randomDamageMultiplier(0.75,1.1)*playerA.damage;
-			console.log(playerA.health);
-			console.log(playerB.health);
+		battledome.attackSequence = () => {
+			const playerADamage = randomDamageMultiplier(0.75,1.1)*playerB.damage;
+			const playerBDamage = randomDamageMultiplier(0.75,1.1)*playerA.damage;
+			playerA.health -= playerBDamage;
+			playerB.health -= playerADamage;
+			battledome.updateStats(playerA, playerB, playerADamage, playerBDamage);
 			battledome.flowControl();
 		};
 
-		// APPLIES MODIFIERS TO PLAYER AND PLAYER A OBJECTS//
+		//APPLIES MODIFIERS TO PLAYER OBJECTS//
 		playerA.applyModifiers();
 		playerB.applyModifiers();
+
+		//ADDS EVENTS LISTENER FOR CLICK ON ATTACK BUTTON//
 		$('#attackButton').click(battledome.attackSequence);
 	};
 

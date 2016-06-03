@@ -14,7 +14,7 @@ var battledome = (function(battledome){
 	battledome.ArmorBuggy.prototype = new battledome.Bipedal();
 	battledome.FlameTank.prototype = new battledome.Bipedal();
 
-  battledome.createPlayer = function (playerName, robotModel) {
+  battledome.createPlayer = (playerName, robotModel) => {
     battledome.Player.prototype = new battledome[robotModel]();
     return new battledome.Player(playerName);
   };
