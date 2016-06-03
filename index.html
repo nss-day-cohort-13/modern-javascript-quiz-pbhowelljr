@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Robot Battledome</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<h1>Robot Battledome</h1>
+	<input class="nameInput" type="text" placeholder="player A name:">
+	<select name="playerARobotModel">
+		<option value="Quadcopter">Quadcopter</option>
+		<option value="Hovership">Hovership</option>
+		<option value="LaserMech">LaserMech</option>
+		<option value="GunMech">GunMech</option>
+		<option value="ArmorBuggy">ArmorBuggy</option>
+		<option value="FlameTank">FlameTank</option>
+	</select>
+	<input class="nameInput" type="text" placeholder="player B name:">
+	<select name="playerBRobotModel">
+		<option value="Quadcopter">Quadcopter</option>
+		<option value="Hovership">Hovership</option>
+		<option value="LaserMech">LaserMech</option>
+		<option value="GunMech">GunMech</option>
+		<option value="ArmorBuggy">ArmorBuggy</option>
+		<option value="FlameTank">FlameTank</option>
+	</select>
+	<button id="submitButton" type="submit">Submit</button>
+	<!-- DEV SCRIPTS -->
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- APP SCRIPTS -->
+	<script src="/javascripts/constructors.js"></script>
+	<script src="/javascripts/createPlayer.js"></script>
+	<script src="/javascripts/combat.js"></script>
+	<script src="/javascripts/runner.js"></script>
+</body>
+</html>
