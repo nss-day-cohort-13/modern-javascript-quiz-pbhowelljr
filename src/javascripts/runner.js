@@ -1,2 +1,0 @@
-//*****RUNNNER*****//
-'use strict';

@@ -1,4 +1,5 @@
 //*****COMBAT*****//
+/*global battledome: true */ 
 'use strict';
 
 var battledome = (function(battledome){
@@ -17,12 +18,12 @@ var battledome = (function(battledome){
 				battledome.attackSequence();
 			} else{
 				if(playerA.health > playerB.health){
-					console.log("player A wins!")
+					console.log("player A wins!");
 				}
 				if(playerA.health < playerB.health){
-					console.log("player B wins!")
+					console.log("player B wins!");
 				} else{
-						console.log('game over')
+						console.log('game over');
 				}
 			}
 		};
