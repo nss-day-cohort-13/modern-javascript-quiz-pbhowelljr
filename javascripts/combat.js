@@ -8,7 +8,7 @@ var battledome = (function(battledome){
 	battledome.combat = (playerA, playerB) => {
 
 		//GENERATES RANDOM NUMBER FOR DAMAGE MULTIPLIER//
-		var randomDamageMultiplier = (min,max) => {
+		battledome.randomDamageMultiplier = (min,max) => {
 			return Math.random() * (max-min) + min;
 		};
 
@@ -17,9 +17,9 @@ var battledome = (function(battledome){
 			if(playerA.health <= 0 || playerB.health <= 0) {
 				$('#attackButton').prop('disabled', true);
 				if(playerA.health > playerB.health){
-					$('.stats').append("player A wins!");
+					$('.stats').append(`${playerA.model} ${playerA.type} defeated ${playerB.model} ${playerB.type}`);
 				} else {
-					$('.stats').append("player B wins!");
+					$('.stats').append(`${playerB.model} ${playerB.type} defeated ${playerA.model} ${playerA.type}`);
 				}
 			}
 		};
@@ -27,17 +27,22 @@ var battledome = (function(battledome){
 		//CALLBACK FOR ATTACK BUTTON EVENT LISTENER//
 		//MAIN ATTACK/DAMAGE SEQUENCE//
 		battledome.attackSequence = () => {
-			const playerADamage = randomDamageMultiplier(0.75,1.1)*playerB.damage;
-			const playerBDamage = randomDamageMultiplier(0.75,1.1)*playerA.damage;
+			const playerADamage = battledome.randomDamageMultiplier(0.75, 1.1)*playerB.damage;
+			const playerBDamage = battledome.randomDamageMultiplier(0.75, 1.1)*playerA.damage;
 			playerA.health -= playerBDamage;
 			playerB.health -= playerADamage;
 			battledome.updateStats(playerA, playerB, playerADamage, playerBDamage);
 			battledome.flowControl();
 		};
 
+
+
 		//APPLIES MODIFIERS TO PLAYER OBJECTS//
 		playerA.applyModifiers();
 		playerB.applyModifiers();
+
+		//INITIALIZES GAME BOARD//
+		battledome.initializeStats(playerA, playerB);
 
 		//ADDS EVENTS LISTENER FOR CLICK ON ATTACK BUTTON//
 		$('#attackButton').click(battledome.attackSequence);

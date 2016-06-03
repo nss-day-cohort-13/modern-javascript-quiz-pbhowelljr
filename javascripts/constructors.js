@@ -9,8 +9,8 @@ var battledome = (function(battledome){
       this.health = 100;
       this.damage = 10;
       this.applyModifiers = function() {
-        this.health *= this.modelHealthModifier;
-        this.damage *= this.modelDamageModifier;
+        this.health *= this.modelHealthModifier * battledome.randomDamageMultiplier(0.9, 1.1);
+        this.damage *= this.modelDamageModifier * battledome.randomDamageMultiplier(0.9, 1.1);
       };
     };
 

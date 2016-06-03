@@ -4,6 +4,7 @@
 
 var battledome = (function(battledome){
 
+	//SETS UP STATIC INHERITANCE CHAINS//
 	battledome.Drone.prototype = new battledome.Robot();
 	battledome.Atv.prototype = new battledome.Robot();
 	battledome.Bipedal.prototype = new battledome.Robot();
@@ -14,6 +15,7 @@ var battledome = (function(battledome){
 	battledome.ArmorBuggy.prototype = new battledome.Bipedal();
 	battledome.FlameTank.prototype = new battledome.Bipedal();
 
+	//CONSTRUCTS PLAYER OBJECT GIVEN PLAYERNAME AND MODEL//
   battledome.createPlayer = (playerName, robotModel) => {
     battledome.Player.prototype = new battledome[robotModel]();
     return new battledome.Player(playerName);

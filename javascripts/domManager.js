@@ -4,6 +4,7 @@
 
 var battledome = (function(battledome){
 
+	//ADDS GAME SETUP VIEW TO DOM//
 	battledome.addGameSetupView = () => {
 		$('.mainContent').html(`
 			<input class="nameInput" type="text" placeholder="player A name:">
@@ -28,6 +29,7 @@ var battledome = (function(battledome){
 			`);
 	};
 
+	//ADDS COMBAT VIEW TO DOM//
 	battledome.addCombatView = () => {
 		$('.mainContent').html(`
 			<button id="attackButton" type="submit">Attack</button>
@@ -35,22 +37,32 @@ var battledome = (function(battledome){
 			`);
 	};
 
-	battledome.updateStats = (playerA, playerB, playerADamage, playerBDamage) => {
+	//ADDS PLAYERS DATA TO DOM//
+	battledome.initializeStats = (playerA, playerB) => {
 		$('.stats').html(`
-			<p>${playerA.name}: ${playerA.health.toFixed(2)} health</p>
-			<p>${playerB.name}: ${playerB.health.toFixed(2)} health</p>
-			<p>${playerA.name} did ${playerADamage.toFixed(2)} damage to ${playerB.name}</p>
-			<p>${playerB.name} did ${playerBDamage.toFixed(2)} damage to ${playerA.name}</p>
-			`)
+			<p>${playerA.name}: ${playerA.model} ${playerA.type}'s health = ${playerA.health.toFixed(2)}</p>
+			<p>${playerB.name}: ${playerB.model} ${playerB.type}'s health = ${playerB.health.toFixed(2)}</p>
+			`);
 	};
 
+	//UPDATES PLAYERS DATA IN DOM//
+	battledome.updateStats = (playerA, playerB, playerADamage, playerBDamage) => {
+		$('.stats').html(`
+			<p>${playerA.name}: ${playerA.model} ${playerA.type}'s health = ${playerA.health.toFixed(2)}</p>
+			<p>${playerB.name}: ${playerB.model} ${playerB.type}'s health = ${playerB.health.toFixed(2)}</p>
+			<p>${playerA.name} did ${playerADamage.toFixed(2)} damage to ${playerB.name}</p>
+			<p>${playerB.name} did ${playerBDamage.toFixed(2)} damage to ${playerA.name}</p>
+			`);
+	};
+
+	//CREATES NEW PLAYERS OBJECTS FROM UI INPUT//
 	battledome.playersCreateButtonCallback = () => {
-		var aName = $('.nameInput')[0].value;
-		var bName = $('.nameInput')[1].value;
-		var aModel = $('.playerModel')[0].value;
-		var bModel = $('.playerModel')[1].value;
-		var a = battledome.createPlayer(aName, aModel);
-		var b = battledome.createPlayer(bName, bModel);
+		const aName = $('.nameInput')[0].value;
+		const bName = $('.nameInput')[1].value;
+		const aModel = $('.playerModel')[0].value;
+		const bModel = $('.playerModel')[1].value;
+		const a = battledome.createPlayer(aName, aModel);
+		const b = battledome.createPlayer(bName, bModel);
 		battledome.addCombatView();
 		battledome.combat(a,b);
 	};
