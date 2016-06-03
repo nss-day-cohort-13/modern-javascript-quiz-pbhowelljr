@@ -9,7 +9,7 @@
 <body>
 	<h1>Robot Battledome</h1>
 	<input class="nameInput" type="text" placeholder="player A name:">
-	<select name="playerARobotModel">
+	<select class="playerModel"name="playerARobotModel">
 		<option value="Quadcopter">Quadcopter</option>
 		<option value="Hovership">Hovership</option>
 		<option value="LaserMech">LaserMech</option>
@@ -18,7 +18,7 @@
 		<option value="FlameTank">FlameTank</option>
 	</select>
 	<input class="nameInput" type="text" placeholder="player B name:">
-	<select name="playerBRobotModel">
+	<select class="playerModel" name="playerBRobotModel">
 		<option value="Quadcopter">Quadcopter</option>
 		<option value="Hovership">Hovership</option>
 		<option value="LaserMech">LaserMech</option>
@@ -26,13 +26,14 @@
 		<option value="ArmorBuggy">ArmorBuggy</option>
 		<option value="FlameTank">FlameTank</option>
 	</select>
-	<button id="submitButton" type="submit">Submit</button>
+	<button id="playersCreateButton" type="submit">Submit</button>
 	<!-- DEV SCRIPTS -->
 	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
 	<!-- APP SCRIPTS -->
 	<script src="/javascripts/constructors.js"></script>
 	<script src="/javascripts/createPlayer.js"></script>
 	<script src="/javascripts/combat.js"></script>
+	<script src="/javascripts/domManager.js"></script>
 	<script src="/javascripts/runner.js"></script>
 </body>
 </html>

@@ -3,10 +3,18 @@
 'use strict';
 
 var battledome = (function(battledome){
-	
-  battledome.createPlayer = function (playerName, robotType, robotModel) {
-    battledome[robotType].prototype = new battledome.Robot();
-    battledome[robotModel].prototype = new battledome[robotType]();
+
+	battledome.Drone.prototype = new battledome.Robot();
+	battledome.Atv.prototype = new battledome.Robot();
+	battledome.Bipedal.prototype = new battledome.Robot();
+	battledome.Quadcopter.prototype = new battledome.Drone();
+	battledome.Hovership.prototype = new battledome.Drone();
+	battledome.GunMech.prototype = new battledome.Atv();
+	battledome.LaserMech.prototype = new battledome.Atv();
+	battledome.ArmorBuggy.prototype = new battledome.Bipedal();
+	battledome.FlameTank.prototype = new battledome.Bipedal();
+
+  battledome.createPlayer = function (playerName, robotModel) {
     battledome.Player.prototype = new battledome[robotModel]();
     return new battledome.Player(playerName);
   };
