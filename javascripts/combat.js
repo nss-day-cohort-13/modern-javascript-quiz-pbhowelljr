@@ -14,16 +14,12 @@ var battledome = (function(battledome){
 
 		//FLOW CONTROL//
 		battledome.flowControl = function(){
-			if(playerA.health >= 0 && playerB.health >= 0){
-				battledome.attackSequence();
-			} else{
+			if(playerA.health <= 0 || playerB.health <= 0) {
+				$('#attackButton').prop('disabled', true);
 				if(playerA.health > playerB.health){
 					console.log("player A wins!");
-				}
-				if(playerA.health < playerB.health){
+				} else {
 					console.log("player B wins!");
-				} else{
-						console.log('game over');
 				}
 			}
 		};
@@ -41,7 +37,7 @@ var battledome = (function(battledome){
 		// APPLIES MODIFIERS TO PLAYER AND PLAYER A OBJECTS//
 		playerA.applyModifiers();
 		playerB.applyModifiers();
-		battledome.attackSequence();
+		$('#attackButton').click(battledome.attackSequence);
 	};
 
   return battledome;
