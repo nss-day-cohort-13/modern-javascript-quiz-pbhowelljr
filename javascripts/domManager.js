@@ -25,7 +25,7 @@ var battledome = (function(battledome){
 				<option value="ArmorBuggy">ArmorBuggy</option>
 				<option value="FlameTank">FlameTank</option>
 			</select>
-			<button id="playersCreateButton" type="submit">Submit</button>
+			<button id="initializeCombatButton" type="submit">Submit</button>
 			`);
 	};
 
@@ -55,16 +55,22 @@ var battledome = (function(battledome){
 			`);
 	};
 
+	battledome.endGameView = function(winner, loser){
+		$('.stats').append(`<p>${winner.name}'s ${winner.model} ${winner.type} defeated ${loser.name}'s ${loser.model} ${loser.type}!</p>`);
+		$('.stats').append(`<p>${winner.name} wins!</p>`);
+	};
+
+
 	//CREATES NEW PLAYERS OBJECTS FROM UI INPUT//
-	battledome.playersCreateButtonCallback = () => {
+	battledome.initializeCombatButtonCallback = () => {
 		const aName = $('.nameInput')[0].value;
 		const bName = $('.nameInput')[1].value;
 		const aModel = $('.playerModel')[0].value;
 		const bModel = $('.playerModel')[1].value;
-		const a = battledome.createPlayer(aName, aModel);
-		const b = battledome.createPlayer(bName, bModel);
+		const playerA = battledome.createPlayer(aName, aModel);
+		const playerB = battledome.createPlayer(bName, bModel);
 		battledome.addCombatView();
-		battledome.combat(a,b);
+		battledome.initializeCombat(playerA, playerB);
 	};
 
   return battledome;

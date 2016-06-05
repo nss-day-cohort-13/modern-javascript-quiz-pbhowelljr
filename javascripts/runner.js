@@ -3,4 +3,4 @@
 
 //INITIALIZES APP//
 battledome.addGameSetupView();
-$('#playersCreateButton').click(battledome.playersCreateButtonCallback);
+$('#initializeCombatButton').click(battledome.initializeCombatButtonCallback);
