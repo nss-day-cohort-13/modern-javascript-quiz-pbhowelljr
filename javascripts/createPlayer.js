@@ -10,10 +10,10 @@ var battledome = (function(battledome){
 	battledome.Bipedal.prototype = new battledome.Robot();
 	battledome.Quadcopter.prototype = new battledome.Drone();
 	battledome.Hovership.prototype = new battledome.Drone();
-	battledome.GunMech.prototype = new battledome.Atv();
-	battledome.LaserMech.prototype = new battledome.Atv();
-	battledome.ArmorBuggy.prototype = new battledome.Bipedal();
-	battledome.FlameTank.prototype = new battledome.Bipedal();
+	battledome.GunMech.prototype = new battledome.Bipedal();
+	battledome.LaserMech.prototype = new battledome.Bipedal();
+	battledome.ArmorBuggy.prototype = new battledome.Atv();
+	battledome.FlameTank.prototype = new battledome.Atv();
 
 	//CONSTRUCTS PLAYER OBJECT GIVEN PLAYERNAME AND MODEL//
   battledome.createPlayer = (playerName, robotModel) => {
