@@ -32,43 +32,43 @@ var battledome = (function(battledome){
     //QUADCOPTER
     battledome.Quadcopter = function(){
       this.model = 'Quadcopter';
-      this.modelHealthModifier = 1;
-      this.modelDamageModifier = 1;
+      this.modelHealthModifier = 0.7;
+      this.modelDamageModifier = 1.3;
     };
 
     //HOVERSHIP
     battledome.Hovership = function(){
       this.model = 'Hovership';
-      this.modelHealthModifier = 1;
-      this.modelDamageModifier = 1;
+      this.modelHealthModifier = 0.8;
+      this.modelDamageModifier = 1.2;
     };
 
     //LASER MECH
     battledome.LaserMech = function(){
       this.model = 'LaserMech';
-      this.modelHealthModifier = 1;
-      this.modelDamageModifier = 1;
+      this.modelHealthModifier = 0.9;
+      this.modelDamageModifier = 1.1;
     };
 
     //GUN MECH
     battledome.GunMech = function(){
     	this.model = 'GunMech';
-      this.modelHealthModifier = 1;
-      this.modelDamageModifier = 1;
+      this.modelHealthModifier = 1.1;
+      this.modelDamageModifier = 0.9;
     };
 
     //ARMOR BUGGY
     battledome.ArmorBuggy = function(){
     	this.model = 'ArmorBuggy';
-      this.modelHealthModifier = 1;
-      this.modelDamageModifier = 1;
+      this.modelHealthModifier = 1.2;
+      this.modelDamageModifier = 0.8;
     };
 
     //FLAME TANK
     battledome.FlameTank = function(){
     	this.model = 'FlameTank';
-      this.modelHealthModifier = 1;
-      this.modelDamageModifier = 1;
+      this.modelHealthModifier = 1.3;
+      this.modelDamageModifier = 0.7;
     };
 
     //PLAYER
