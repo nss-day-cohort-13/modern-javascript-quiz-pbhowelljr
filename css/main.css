@@ -1,5 +1,18 @@
 /* GENERAL STYLES */
-* {
-	background-color:#7fffd4;
-	list-style:none
+
+body {
+	background-color: mediumturquoise;
+}
+
+h1 {
+	text-align: center;
+}
+
+.playerModel {
+	margin-top: 10px ;
+	margin-bottom: 10px;
+}
+.stats  {
+	margin-top: 20px;
+	text-align: center;
 }
