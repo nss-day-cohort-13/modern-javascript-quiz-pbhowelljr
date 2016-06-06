@@ -1,5 +1,5 @@
 //*****CONSTRUCTORS*****//
-/*global battledome: true */ 
+/*global battledome: true */
 'use strict';
 
 var battledome = (function(battledome){
