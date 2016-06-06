@@ -28,7 +28,6 @@ describe('battledome', function() {
 		it('should end game if player health is less than 0', function() {
 			var playerA = battledome.createPlayer("", "Quadcopter");
 			var playerB = battledome.createPlayer("", "Hovership");
-			console.log(playerA.health, playerB.health)
 			spyOn(battledome, 'endGameView');
 			battledome.flowControl(playerA, playerB);
 			expect(battledome.endGameView).not.toHaveBeenCalled();
