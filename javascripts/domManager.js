@@ -60,10 +60,10 @@ var battledome = (function(battledome){
 					<p class='col-md-4 healthValue'>${playerA.health.toFixed(0)}</p>
 				</div>	
 				<div class='col-sm-3 col-sm-offset-2 row playerStats'>
-						<h3 class='col-md-12'>${playerB.name}</h3>
-						<h5 class='col-md-12'>${playerB.model} ${playerB.type}</h5>
-						<p class='col-md-3 col-sm-offset-3'>Health:</p>
-						<p class='col-md-4 healthValue'>${playerB.health.toFixed(0)}</p>
+					<h3 class='col-md-12'>${playerB.name}</h3>
+					<h5 class='col-md-12'>${playerB.model} ${playerB.type}</h5>
+					<p class='col-md-3 col-sm-offset-3'>Health:</p>
+					<p class='col-md-4 healthValue'>${playerB.health.toFixed(0)}</p>
 				</div>	
 			</div>	
 			`);
@@ -90,8 +90,8 @@ var battledome = (function(battledome){
 			`);
 	};
 
+	//ADDS END OF GAME DATA TO DOM//
 	battledome.endGameView = function(winner, loser){
-
 		$('.endStats').html(`
 			<div class='row'>
 				<div class='col-sm-6 col-sm-offset-3 endGameDiv'>

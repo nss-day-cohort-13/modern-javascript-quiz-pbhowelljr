@@ -1,5 +1,5 @@
 {
-  "predef": [ "window", "XMLHttpRequest", "document", "jQuery", "$", "console", "battledome" ],
+  "predef": [ "window", "document", "jQuery", "$", "console", "battledome" ],
   "esversion": 6,
   "globalstrict": true
 }
