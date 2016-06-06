@@ -82,6 +82,7 @@ If you have completed the base requirements, and want to explore object composit
 # Project Installation
 ```bash
 npm install
+bower install
 http-server
 ```
 
