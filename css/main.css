@@ -1,0 +1,29 @@
+/* GENERAL STYLES */
+
+body {
+	background-color: mediumturquoise;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+
+h1 {
+	text-align: center;
+}
+
+.playerModel {
+	margin-top: 10px ;
+	margin-bottom: 10px;
+}
+
+.playerStats,
+.endGameDiv {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background: #D4F2FC;
+	padding: 2.5px;
+}
+
+.healthValue {
+	color: green;
+}

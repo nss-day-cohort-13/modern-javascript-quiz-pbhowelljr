@@ -1,0 +1,21 @@
+{
+  "name": "robot-battledome",
+  "description": "## Setup",
+  "main": "index.js",
+  "authors": [
+    "pbhowelljr <pbhowelljr@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nss-day-cohort-13/modern-javascript-quiz-pbhowelljr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jasmine-core": "jasmine#^2.4.1"
+  }
+}
