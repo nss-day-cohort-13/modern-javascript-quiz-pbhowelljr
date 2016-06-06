@@ -16,14 +16,12 @@
     "url": "https://github.com/nss-day-cohort-13/modern-javascript-quiz-pbhowelljr/issues"
   },
   "homepage": "https://github.com/pbhowelljr/sass-demo#readme",
-  "dependencies": {
-    "node-sass": "^3.7.0"
-  },
   "devDependencies": {
+    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
     "gulp-watch": "^4.3.6",
     "jshint": "^2.9.2",
-    "jshint-stylish": "^2.2.0",
+    "jshint-stylish": "^2.2.0"
   }
 }
