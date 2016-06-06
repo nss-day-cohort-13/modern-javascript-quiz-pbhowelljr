@@ -32,7 +32,7 @@ var battledome = (function(battledome){
 				</div>	
 			</div>
 			<div class='row'>
-				<button class='col-sm-4 col-sm-offset-4 btn btn-primary' id="initializeCombatButton" type="submit">Submit</button>
+				<button class='col-sm-4 col-sm-offset-4 btn btn-primary' id="initializeCombatButton">Submit</button>
 			</div>
 			`);
 	};
@@ -42,7 +42,7 @@ var battledome = (function(battledome){
 		$('.mainContent').html(`
 			<div class="stats"></div>
 			<div class='row'>
-				<button class='col-sm-4 col-sm-offset-4 btn btn-primary' id="attackButton" type="submit">Attack</button>
+				<button class='col-sm-4 col-sm-offset-4 btn btn-primary' id="attackButton">Attack</button>
 			</div>
 			<div class="endStats"></div>
 			
